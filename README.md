@@ -21,7 +21,7 @@ access to all versions of your receiver. (development, staging, and production)
 * [Tutorial on CORS](http://www.html5rocks.com/en/tutorials/cors/)
 * [Cast Developer Documentation](http://developers.google.com/cast/)
 * [Receiver Apps](https://developers.google.com/cast/docs/receiver_apps)
-* [Media Player Library Reference](https:/developers.google.com/cast/docs/reference/player/)
+* [Media Player Library Reference](https://developers.google.com/cast/docs/reference/player/)
 * [Receiver Reference](https://developers.google.com/cast/docs/reference/receiver/)
 * [Design Checklist](http://developers.google.com/cast/docs/design_checklist)
 * If you find any issues with this sample, please open a bug here on GitHub
