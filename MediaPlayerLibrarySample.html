@@ -64,6 +64,7 @@ window.onload = function() {
 // developer console, include debugging information.
   if (window.location.href.indexOf('Debug=true') != -1) {
     cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+    cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
   }
 
   var mediaElement = document.getElementById('vid');
@@ -103,7 +104,7 @@ window.onload = function() {
       } else if (url.lastIndexOf('.mpd') >= 0) {
 // MPEG-DASH
         protocol = cast.player.api.CreateDashStreamingProtocol(host);
-      } else if (url.indexOf('.ism/') >= 0) {
+      } else if (url.indexOf('.ism') >= 0) {
 // Smooth Streaming
         protocol = cast.player.api.CreateSmoothStreamingProtocol(host);
       }
@@ -111,7 +112,10 @@ window.onload = function() {
 // method.
       host.onError = function(errorCode) {
         console.log("Fatal Error - "+errorCode);
-        window.player.unload();
+        if (window.player) {
+          window.player.unload();
+          window.player = null;
+        }
       };
 // If you need cookies, then set withCredentials = true also set any header
 // information you need.  If you don't need them, there can be some unexpected
