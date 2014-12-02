@@ -14,7 +14,7 @@ sample. It shows how to hook up the library with the receiver api.
 * You should now be able to launch your receiver using a sender.
 * If you wish to watch whats going on, using a Chrome browser, connect to &lt;IP of your Chromecast>:9222 and debug your receiver.  A good place to start is looking at the console log.
 * The Media Player Library uses XMLHTTPRequest to load all assets (Manifests,
-sub-manifests, segments, crypto keys, etc. This means that these are subject to CORS rules.  You asset server(s) will need to server CORS headers that enable
+sub-manifests, segments, crypto keys, etc. This means that these are subject to CORS rules.  Your asset server(s) will need to serve CORS headers that enable
 access to all versions of your receiver. (development, staging, and production)
 
 ## References and How to report bugs
